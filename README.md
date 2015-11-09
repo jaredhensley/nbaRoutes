@@ -90,7 +90,7 @@ Now we want to create a method on our scope object that will be called whenever 
 * Take a look at the `teamService.js` file and notice what `addNewGame` returns.
 * You should have noticed it returns a promise. That means immediately after we call `addNewGame` we can call `.then()`
 * Call `.then` and pass it a callback function. this function is then going to call the `getTeamData` service, passing it `$scope.newGame.homeTeam`. We've added a new game to the home team's schedule and now we need to go and get the new data that's in our database.
-* You should notice that the `getTeamData` method is also returning a promise. So just like before, call `.then` immediately after you call `getTeamData()` and give it a callback function which accepts parameter (which is going to be the data returned from the `getTeamData` method)
+* You should notice that the `getTeamData` method is also returning a promise. So just like before, call `.then` immediately after you call `getTeamData()` and give it a callback function which accepts parameter (which is going to be the data returned from the `getTeamData` method)***************
 * Now we want to set a few properties on our scope based off the data we got from our promise. First, set `$scope.teamData` equal to the data you got back from the promise. Then, reset `$scope.newGame` to be an empty object, then set `$scope.showNewGameForm` back to `false`.
 
 
