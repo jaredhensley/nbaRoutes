@@ -1,11 +1,15 @@
 <div class="inner-container">
+
   <div class="logo">
     <img ng-src="{{logoPath}}">
   </div>
+
   <div class="record">
     <h1> Wins: {{teamData.wins}} Losses: {{teamData.losses}} </h1>
   </div>
+
   <div class="btn" ng-click="toggleNewGameForm()"> Add a New Game </div>
+
   <form ng-show="showNewGameForm" class="form">
     <span class="large"> Opponent: </span>
     <br />
@@ -18,7 +22,9 @@
     <br />
     <button ng-click="submitGame()"> Submit Game </button>
   </form>
+
   <div class="team-data">
+
     <div class="game" ng-repeat="game in teamData" ng-class="{'even' : $index % 2 === 0}">
       <!-- Each game should end up looking something like this:
         Date: May 29, 1997
@@ -30,5 +36,6 @@
       <br /> {{game.opponent}} - {{game.opponentScore}}
       </br />
     </div>
+
   </div>
 </div>

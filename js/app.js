@@ -13,7 +13,9 @@ app.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
       controller: 'homeCtrl',
       templateUrl: 'js/home/homeTmpl.html',
       resolve: {
-
+        allData: function ($stateParams, homeService) {
+          return homeService.getAllData();
+        }
       }
 
     })

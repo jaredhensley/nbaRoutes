@@ -1,5 +1,9 @@
-var app = angular.module('nbaRoutes');
+// the resolved data from the router needs to be injected into the controller
+app.controller('homeCtrl', function ($scope, $stateParams, homeService, allData) {
 
-app.controller('homeCtrl', function ($scope, homeService) {
+  $scope.jazzData = allData['utahjazz'];
+  $scope.lakerData = allData['losangeleslakers'];
+  $scope.heatData = allData['miamiheat'];
+
 
 });
